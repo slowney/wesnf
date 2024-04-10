@@ -1,24 +1,27 @@
-Apr-10 11:14:46.439 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun 'https://github.com/slowney/wesnf' -profile kubuser_kuberun -r main --outdir /mnt/data/BFX_Pres -head-prescript /mnt/data/config-add.sh
-Apr-10 11:14:46.535 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/slowney/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Apr-10 11:14:46.542 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Apr-10 11:14:46.543 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Apr-10 11:14:46.547 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Apr-10 11:14:46.553 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Apr-10 11:14:46.561 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/slowney/.nextflow/scm
-Apr-10 11:14:46.896 [main] DEBUG nextflow.scm.ProviderConfig - Detected SCM config: [providers:[myazure:[server:https://dev.azure.com, password:akb****, user:slowney, platform:azurerepos]]]
-Apr-10 11:14:46.904 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
-Apr-10 11:14:46.921 [main] DEBUG nextflow.scm.RepositoryFactory - Git url=nextflow.scm.GitUrl(https, null, github.com, slowney/wesnf) -> config=ProviderConfig[name: github, platform: github, server: https://github.com]
-Apr-10 11:14:46.921 [main] DEBUG nextflow.scm.AssetManager - Repository URL: https://github.com/slowney/wesnf; Project: slowney/wesnf; Hub provider: github
-Apr-10 11:14:46.927 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/slowney/wesnf/contents/nextflow.config
-Apr-10 11:14:47.372 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
-Apr-10 11:14:47.375 [main] DEBUG nextflow.config.ConfigBuilder - User config file: https://github.com/slowney/wesnf/nextflow.config
-Apr-10 11:14:47.375 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
-Apr-10 11:14:47.376 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: https://github.com/slowney/wesnf/nextflow.config
-Apr-10 11:14:47.383 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `kubuser_kuberun`
-Apr-10 11:14:47.954 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `kubuser_kuberun`
-Apr-10 11:14:47.961 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/slowney/wesnf/contents/conf/base.config
-Apr-10 11:14:48.160 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [debug, kubuser_kuberun, kubuser_fusion, test, local_tester, apptainer, docker, slurm, gitpod, shifter, mamba, charliecloud, conda, singularity, arm, test_full, podman]
-Apr-10 11:14:48.216 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/mnt/data/slowney/work; projectDir=/mnt/data/projects; volumeClaims=[nf-k8-test-claim]
-Apr-10 11:14:48.259 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/slowney/.nextflow/scm
-Apr-10 11:14:48.299 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-40e8d016
-Apr-10 11:15:21.631 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=stupefied-cray
+Apr-10 11:22:28.628 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun 'https://github.com/slowney/wesnf' -profile kubuser_kuberun --outdir /mnt/data/BFX_Pres -head-prescript /mnt/data/nextflow-cfg.sh -r main -c nextflow.config
+Apr-10 11:22:28.727 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/slowney/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Apr-10 11:22:28.735 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-10 11:22:28.736 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-10 11:22:28.739 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-10 11:22:28.746 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-10 11:22:28.754 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/slowney/.nextflow/scm
+Apr-10 11:22:29.090 [main] DEBUG nextflow.scm.ProviderConfig - Detected SCM config: [providers:[myazure:[server:https://dev.azure.com, password:akb****, user:slowney, platform:azurerepos]]]
+Apr-10 11:22:29.098 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-10 11:22:29.115 [main] DEBUG nextflow.scm.RepositoryFactory - Git url=nextflow.scm.GitUrl(https, null, github.com, slowney/wesnf) -> config=ProviderConfig[name: github, platform: github, server: https://github.com]
+Apr-10 11:22:29.116 [main] DEBUG nextflow.scm.AssetManager - Repository URL: https://github.com/slowney/wesnf; Project: slowney/wesnf; Hub provider: github
+Apr-10 11:22:29.122 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/slowney/wesnf/contents/nextflow.config
+Apr-10 11:22:29.554 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
+Apr-10 11:22:29.557 [main] DEBUG nextflow.config.ConfigBuilder - User config file: https://github.com/slowney/wesnf/nextflow.config
+Apr-10 11:22:29.557 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
+Apr-10 11:22:29.557 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
+Apr-10 11:22:29.558 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: https://github.com/slowney/wesnf/nextflow.config
+Apr-10 11:22:29.560 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/archive/work/slowney/nf-SimpleWES-kuberun/nextflow.config
+Apr-10 11:22:29.567 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `kubuser_kuberun`
+Apr-10 11:22:30.139 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `kubuser_kuberun`
+Apr-10 11:22:30.146 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/slowney/wesnf/contents/conf/base.config
+Apr-10 11:22:30.297 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `kubuser_kuberun`
+Apr-10 11:22:30.459 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [debug, kubuser_kuberun, kubuser_fusion, test, local_tester, apptainer, docker, slurm, gitpod, shifter, mamba, charliecloud, conda, singularity, arm, test_full, podman]
+Apr-10 11:22:30.518 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/mnt/data/slowney/work; projectDir=/mnt/data/projects; volumeClaims=[nf-k8-test-claim]
+Apr-10 11:22:30.555 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/slowney/.nextflow/scm
+Apr-10 11:22:30.594 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-c5782c6d
+Apr-10 11:23:54.814 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=extravagant-celsius
